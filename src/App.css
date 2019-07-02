@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.wraper-slider-p {
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.wraper-slider-p button {
+  position: absolute;
+  left: 5%;
+  top: 45%;
+}
+
+.wraper-slider-p button + button {
+  position: absolute;
+  right: 5%;
+  left: initial;
+  top: 45%;
+}
+
+.wraper-slider-p .slider {
+  width: 240px;
+  height: 360px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wraper-slider-p .slider-run {
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 200ms linear 0s;
+  transition: -webkit-transform 200ms linear 0s;
+  -o-transition: transform 200ms linear 0s;
+  transition: transform 200ms linear 0s;
+  transition: transform 200ms linear 0s, -webkit-transform 200ms linear 0s;
+}
+
+.wraper-slider-p li{
+  list-style: none;
+  width: 240px;
+  transform: scale(.7);
+  transition: transform 200ms linear 0s;
+}
+
+.wraper-slider-p .slider:after {
+  content: "";
+  width: 240px;
+  height: 360px;
+  border: 2px solid #209cee;
+  display: block;
+}
+
+.wraper-slider-p li.active {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
